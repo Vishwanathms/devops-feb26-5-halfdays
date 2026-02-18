@@ -33,3 +33,18 @@ jobs:
       - name: using env var agin
         run: echo "using env $app_env again"
 ```
+
+## Instructions
+
+```
+git add .
+git commit -m "added env and push condition"
+```
+
+* now we change the branch to "dev"
+```
+git checkout -b dev
+git push dev
+
+```
+
