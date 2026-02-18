@@ -44,6 +44,7 @@ git commit -m "added env and push condition"
 * now we change the branch to "dev"
 ```
 git checkout -b dev
+git branch
 git push dev
 
 ```
