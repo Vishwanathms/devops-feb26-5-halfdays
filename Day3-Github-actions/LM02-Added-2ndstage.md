@@ -3,7 +3,10 @@
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-java@v4
-        with:
-          java-version: '17'
+     - name: Set up Java 17
+       uses: actions/setup-java@v4
+       with:
+         distribution: 'temurin'
+         java-version: '17'
+
 ```
