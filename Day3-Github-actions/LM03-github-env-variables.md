@@ -49,3 +49,11 @@ git push dev
 
 ```
 
+* lets add some content to the repo
+* Create an file1.txt in the repo and put some content 
+```
+git add .
+git commit -m "added file in branch dev"
+git push
+```
+ 
