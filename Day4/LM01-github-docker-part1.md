@@ -151,11 +151,15 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       # -------------------------
-      # Stage 2 — Docker build
+      # Stage 2 — BUild with commit ID as TAG
       # -------------------------
-      - name: Stage 2 - Build Docker image
+
+      - name: Set image tag
+        run: echo "IMAGE_TAG=${GITHUB_SHA::7}" >> $GITHUB_ENV
+
+      - name: Build image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/python-gha-lab:latest .
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/python-gha-lab:${{ env.IMAGE_TAG }} .
           docker images
 
       # -------------------------
@@ -166,7 +170,7 @@ jobs:
 
       - name: Stage 3 - Push Docker image
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/python-gha-lab:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/python-gha-lab:${{ env.IMAGE_TAG }}
 ```
 
 Commit + push:
