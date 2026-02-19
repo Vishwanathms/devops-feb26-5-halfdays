@@ -1,0 +1,28 @@
+name: First GitHub Actions Workflow
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  CI-Part:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Check if docker is pressent
+        run: | 
+          echo "Checking Docker version..."
+          docker --version
+
+          echo "Checking Docker info..."
+          docker info
+
+          echo "Listing current directory..."
+          ls -la
+
+          echo "Checking OS details..."
+          uname -a

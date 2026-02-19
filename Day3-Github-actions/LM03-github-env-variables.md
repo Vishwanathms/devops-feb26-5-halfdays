@@ -56,4 +56,7 @@ git add .
 git commit -m "added file in branch dev"
 git push
 ```
- 
+
+## Check the github actions , if there is any actions triggered. ( THERE SHOULD NO ACTION TRIGGERED)
+
+* FInally we will create a pull request from "dev" branch to "main" branch
