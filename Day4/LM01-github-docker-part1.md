@@ -156,6 +156,7 @@ jobs:
       - name: Stage 2 - Build Docker image
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/python-gha-lab:latest .
+          docker images
 
       # -------------------------
       # Stage 3 — Push to Docker Hub

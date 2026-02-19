@@ -6,3 +6,4 @@ COPY index.html /usr/local/apache2/htdocs/
 
 # Expose Apache default port
 EXPOSE 80
+
