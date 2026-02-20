@@ -3,12 +3,6 @@
 provider "aws" {
   region = "ap-south-1"
 
-  # IMPORTANT: Change 'userX' to your assigned student ID (user1, user2, etc.)
-  default_tags {
-    tags = {
-      owner = "userX"
-    }
-  }
 }
 
 # EC2 Instance Resource
