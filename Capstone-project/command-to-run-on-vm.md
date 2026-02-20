@@ -1,0 +1,1 @@
+docker run -d --name python-gha-lab -p 8080:8080 -e APP_ENV=ci     <hubdockerid>/python-gha-lab:<latest-tag>
